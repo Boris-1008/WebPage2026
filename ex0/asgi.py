@@ -5143,12 +5143,12 @@ File C:\Users\laino\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_
 File C:\Users\laino\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\django\db\migrations\serializer.py first seen with mtime 1772621227.9443934
 File C:\Users\laino\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\django\contrib\sessions\backends\db.py first seen with mtime 1772621227.426086
 File C:\Users\laino\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\django\db\migrations\executor.py first seen with mtime 1772621227.93136
-myhello API ³Q©I¥s¤F¡Aname=CGU
+myhello API Â³QÂ©IÂ¥sÂ¤FÂ¡Aname=CGU
 "GET /myhello/ HTTP/1.1" 200 9
 File C:\Users\laino\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\django\contrib\messages\storage\cookie.py first seen with mtime 1772621227.1532643
 File C:\Users\laino\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\django\contrib\messages\storage\fallback.py first seen with mtime 1772621227.1542635
 File C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\encodings\unicode_escape.py first seen with mtime 1772620117.7238965
 File C:\Users\laino\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\django\contrib\messages\storage\session.py first seen with mtime 1772621227.1542635
 File C:\Users\laino\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1772621227.424086
-myhello API ³Q©I¥s¤F¡Aname=cj
+myhello API Â³QÂ©IÂ¥sÂ¤FÂ¡Aname=cj
 "GET /myhello/?name=cj HTTP/1.1" 200 8
