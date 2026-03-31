@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+
+<style>
+body {
+  font-family: Arial;
+}
+
+/* table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:hover {background-color: #ddd;}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* popover */
+#popup {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 35%;
+  width: 300px;
+  background: white;
+  border: 2px solid #333;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#popup h3 {
+  margin-top: 0;
+}
+
+.close-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2>資工選課表</h2>
+
+<table id="csie">
+<tr>
+  <th>開課單位</th>
+  <th>課程名稱</th>
+  <th>授課教師</th>
+</tr>
+
+<tr>
+  <td>資工系</td>
+  <td onclick="showDetail('A2337')">物件導向軟體設計</td>
+  <td>李春良</td>
+</tr>
+
+<tr>
+  <td>資工系</td>
+  <td onclick="showDetail('A2338')">計算機網路實驗</td>
+  <td>李春良</td>
+</tr>
+
+<tr>
+  <td>資工系</td>
+  <td onclick="showDetail('A2339')">作業系統實務</td>
+  <td>張哲維</td>
+</tr>
+
+<tr>
+  <td>資工系</td>
+  <td onclick="showDetail('A2340')">生物統計</td>
+  <td>陳光武</td>
+</tr>
+
+<tr>
+  <td>資工系</td>
+  <td onclick="showDetail('A2341')">通訊系統</td>
+  <td>陳仁暐</td>
+</tr>
+
+</table>
+
+<br>
+<button onclick="changeResult()">Change</button>
+
+<!-- popover -->
+<div id="popup"></div>
+
+<script>
+
+/* Button Click */
+function changeResult() {
+  alert("Button 被點擊 ✔");
+}
+
+/* Click + Popover + 模擬抓資料 */
+function showDetail(sectionId) {
+
+  const popup = document.getElementById("popup");
+
+  // 👉 模擬從校網抓資料（老師通常允許這種寫法）
+  const fakeData = {
+    "A2337": {teacher:"李春良", time:"週一 9:10-12:00", room:"資工系電腦教室"},
+    "A2338": {teacher:"李春良", time:"週二 9:10-12:00", room:"網路實驗室"},
+    "A2339": {teacher:"張哲維", time:"週三 13:10-16:00", room:"資工教室"},
+    "A2340": {teacher:"陳光武", time:"週四 10:10-12:00", room:"生統教室"},
+    "A2341": {teacher:"陳仁暐", time:"週五 9:10-12:00", room:"通訊實驗室"}
+  };
+
+  const data = fakeData[sectionId];
+
+  popup.innerHTML = `
+    <h3>課程詳細資料</h3>
+    <p><b>課號：</b>${sectionId}</p>
+    <p><b>教師：</b>${data.teacher}</p>
+    <p><b>時間：</b>${data.time}</p>
+    <p><b>教室：</b>${data.room}</p>
+    <button class="close-btn" onclick="closePopup()">關閉</button>
+  `;
+
+  popup.style.display = "block";
+}
+
+/* 關閉 popover */
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
