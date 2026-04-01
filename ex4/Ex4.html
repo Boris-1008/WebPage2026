@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Christmas Tree</title>
+</head>
+<body>
+  <h1>Christmas Tree 🎄</h1>
+
+  <pre id="tree"></pre>
+
+  <script>
+    function tree(n) {
+      let output = '';
+
+      // 樹的上半部
+      for (let i = 0; i < n; i++) {
+        let spaces = repeatchar(n - 1 - i, ' ');
+        let stars = repeatchar(2 * i + 1, '*');
+        output += spaces + stars + '\n';
+      }
+
+      // 樹幹
+      for (let i = 0; i < 3; i++) {
+        let spaces = repeatchar(n - 1, ' ');
+        output += spaces + '*\n';
+      }
+
+      // 顯示在網頁上
+      document.getElementById("tree").innerText = output;
+    }
+
+    function repeatchar(n, arg_char) {
+      let result = '';
+      for (let i = 0; i < n; i++) {
+        result += arg_char;
+      }
+      return result;
+    }
+
+    // 呼叫
+    tree(4);
+  </script>
+</body>
+</html>
